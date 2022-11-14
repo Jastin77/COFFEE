@@ -1,0 +1,121 @@
+
+
+    .first-section{
+    background-image: url("/images/Bitmap.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1280px;
+    height: 577px;
+    margin: 0 auto;
+    margin-bottom: 400px;
+    background-color: #F2F2F2;
+
+    & .wrapper {
+        
+        & .title {
+            @include fonts();
+            width: 900px;
+            margin: 0 auto;
+            font-size: 40px;
+            line-height: 48px;
+            text-align: center;
+            margin-bottom: 32px;
+            color: #FEFCF7;
+            padding-top: 100px;
+        }
+
+        & .text {
+            @include fonts-sond();
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 86px;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FEFCF7;
+            mix-blend-mode: normal;
+            opacity: 0.8;
+        }
+
+
+        & .cards_wrapper {
+            display: grid;
+            justify-content: center;
+            
+            // padding: 0 65px;
+            grid-template-columns: 0fr 0fr 0fr;
+            gap: 30px;
+
+
+
+            & .first_card {
+                width: 350px;
+                height: 382px;
+                background: #0E8784;
+                border-radius: 8px;
+
+                & .crd_img {
+                    padding: 0 143px 0 136px;
+                    text-align: center;
+                    padding-top: 72px;
+                    margin-bottom: 56px;
+                }
+                & .crd_img3 {
+                    text-align: center;
+                    padding: 0 142px 0 136px;
+                    padding-top: 83px;
+                    margin-bottom: 67px;
+                }
+
+
+                & .card-title {
+                    @include fonts();
+                    font-size: 24px;
+                    line-height: 32px;
+                    text-align: center;
+                    margin-bottom: 24px;
+                    color: #FEFCF7;
+                }
+
+                & .card_text {
+                    @include fonts-sond();
+                    padding: 0 48px 0 47px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    text-align: center;
+                    color: #FEFCF7;
+                }
+            }
+        }
+
+        @media screen and(min-width: 992px) {
+            .cards_wrapper{
+                grid-template-columns: 0fr 0fr 0fr;
+            }
+        }
+        @media screen and(max-width: 991px) {
+            .cards_wrapper{
+                justify-content: center;
+                grid-template-columns: 0fr 0fr;
+            }
+        }
+        @media screen and(max-width: 567px) {
+            .cards_wrapper{
+                grid-template-columns: 0fr;
+                text-align: center;
+            }
+            .first_card{
+                width: 279px;
+                height: 382px;
+            }
+            
+        }
+        
+    }
+}
+
+
+
+
+
